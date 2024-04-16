@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
+import ImgDeFundoComChildren from "../src/components/imgDeFundoComChildren/imgDeFundoComChildren";
+
 const StyledDiv = styled.div`
-  background-color: ${(props) => props.theme.colors.black};
+  background-color: red;
 `;
 
 export default function HomePage() {
-  return <StyledDiv>Pagina inicial</StyledDiv>;
+  return (
+    <ImgDeFundoComChildren>
+      <StyledDiv>Pagina inicial</StyledDiv>
+    </ImgDeFundoComChildren>
+  );
 }
