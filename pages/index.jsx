@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import ImgDeFundoComChildren from "../src/components/imgDeFundoComChildren/ImgDeFundoComChildren";
 import Logo from "../src/components/logo/Logo";
-import Input from "../src/components/form/input/Input";
+import InputComSugestao from "../src/components/form/inputComSugestão/InputComSugestao";
 
 const StyledDiv = styled.div`
   background-color: ${(props) => props.theme.colors.white};
@@ -17,12 +17,26 @@ const StyledDiv = styled.div`
   }
 `;
 
+const EstiloInput = styled(InputComSugestao)`
+  width: 100%;
+  box-sizing: border-box;
+`;
+
+const InputContainer = styled.div`
+  @media (min-width: 750px) {
+    width: 150%;
+  }
+  z-index: 100;
+`;
+
 export default function HomePage() {
   return (
     <ImgDeFundoComChildren>
       <StyledDiv>
         <Logo imageLogo tipo="vertical" />
-        <Input placeholder="Digite o nome da cidade" />
+        <InputContainer>
+          <EstiloInput placeholder="Digite o nome da cidade" />
+        </InputContainer>
       </StyledDiv>
     </ImgDeFundoComChildren>
   );
