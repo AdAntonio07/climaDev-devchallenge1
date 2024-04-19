@@ -9,6 +9,7 @@ const EstiloInput = styled.input`
   font-weight: bold;
   border-radius: 10px;
   box-shadow: 0px 4px 4px 0px #00000040;
+  width: 100%;
 `;
 
 function Input(props) {
