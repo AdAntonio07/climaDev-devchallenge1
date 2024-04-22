@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import ImgDeFundoComChildren from "../src/components/imgDeFundoComChildren/ImgDeFundoComChildren";
+import ImgDeFundoComChildren from "../src/components/layout/imgDeFundoComChildren/ImgDeFundoComChildren";
 import Logo from "../src/components/logo/Logo";
 import PesquisarCidade from "../src/components/pesquisarCidade/PesquisarCidade";
 
