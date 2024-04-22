@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 import InputComSugestao from "../form/inputComSugestão/InputComSugestao";
 
 export default function PesquisarCidade(props) {
   const [pesquisarTexto, setPesquisarTexto] = useState("");
   const [sugestoes, setSugestoes] = useState([]);
+  const router = useRouter();
 
   const buscaListaDeCidades = async () => {
     const LIMITE_CIDADES = 5;
@@ -18,7 +20,7 @@ export default function PesquisarCidade(props) {
   const lidarComLista = (list) => {
     const listaFormatada = list.map((obj) => ({
       text: `${obj.name}, ${obj.state}, ${obj.country}`,
-      onClick: () => console.log(`LAT: ${obj.lat} LON: ${obj.lon}`),
+      onClick: () => router.push(`/info/${obj.lat}/${obj.lon}`),
     }));
     setSugestoes(listaFormatada);
   };
