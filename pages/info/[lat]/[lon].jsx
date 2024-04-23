@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Navbar from "../../../src/components/navbar/Navbar";
 import Container from "../../../src/components/layout/container/Container";
+import ClimaCarde from "../../../src/components/climaCard/ClimaCard";
 
 const Body = styled.div`
   background-color: ${(props) => props.theme.colors.grey};
@@ -20,6 +21,12 @@ const NomeDaCidade = styled.h2`
   padding: 0;
   margin: 0;
 `;
+const InfoContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+`;
 
 export default function InfoPage() {
   return (
@@ -31,6 +38,11 @@ export default function InfoPage() {
             <Texto>Previsão do tempo para</Texto>
             <NomeDaCidade>Seara, SC, Brasil</NomeDaCidade>
           </Conteudo>
+          <InfoContainer>
+            <ClimaCarde />
+            <ClimaCarde />
+            <ClimaCarde />
+          </InfoContainer>
         </Container>
       </Body>
     </>
