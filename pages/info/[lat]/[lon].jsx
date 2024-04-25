@@ -60,7 +60,6 @@ export default function InfoPage() {
     }
   }, [lat, lon]);
 
-  console.log(InformacaoFutura);
   return (
     <>
       <Navbar />
