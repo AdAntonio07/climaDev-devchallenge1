@@ -6,10 +6,11 @@ import styled from "styled-components";
 import Navbar from "../../../src/components/navbar/Navbar";
 import Container from "../../../src/components/layout/container/Container";
 import ClimaCarde from "../../../src/components/climaCard/ClimaCard";
+import Rodape from "../../../src/components/rodape/Rodape";
 
 const Body = styled.div`
   background-color: ${(props) => props.theme.colors.grey};
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);
 `;
 const Conteudo = styled.div`
   padding: 80px 0;
@@ -102,6 +103,7 @@ export default function InfoPage() {
           </InfoContainer>
         </Container>
       </Body>
+      <Rodape>Rodape</Rodape>
     </>
   );
 }
