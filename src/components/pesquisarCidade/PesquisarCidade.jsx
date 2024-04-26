@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import InputComSugestao from "../form/inputComSugestão/InputComSugestao";
 
-export default function PesquisarCidade(props) {
+export default function PesquisarCidade() {
   const [pesquisarTexto, setPesquisarTexto] = useState("");
   const [sugestoes, setSugestoes] = useState([]);
   const router = useRouter();
@@ -11,7 +11,7 @@ export default function PesquisarCidade(props) {
   const buscaListaDeCidades = async () => {
     const LIMITE_CIDADES = 5;
     const resposta = await fetch(
-      `https://api.openweathermap.org/geo/1.0/direct?q=${pesquisarTexto}&limit=${LIMITE_CIDADES}&appid=${process.env.NEXT_PUBLIC_OWM_KEY}`
+      `/api/openweathermap?url=geo/1.0/direct?q=${pesquisarTexto}&limit=${LIMITE_CIDADES}`
     );
     const json = await resposta.json();
     lidarComLista(json);
