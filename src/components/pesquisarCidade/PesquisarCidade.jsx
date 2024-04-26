@@ -11,7 +11,7 @@ export default function PesquisarCidade(props) {
   const buscaListaDeCidades = async () => {
     const LIMITE_CIDADES = 5;
     const resposta = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${pesquisarTexto}&limit=${LIMITE_CIDADES}&appid=${process.env.NEXT_PUBLIC_OWM_KEY}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${pesquisarTexto}&limit=${LIMITE_CIDADES}&appid=${process.env.NEXT_PUBLIC_OWM_KEY}`
     );
     const json = await resposta.json();
     lidarComLista(json);
